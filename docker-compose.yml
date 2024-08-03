@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    volumes:
+      - ./backend:/app
+    environment:
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=dailyTasks
+      - JWT_SECRET=your_jwt_secret_key
+    ports:
+      - "3000:3000"  # Expose backend on port 3000
+
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD:root
+      MYSQL_DATABASE: dailyTasks
+    ports:
+      - "3306:3306"  # Expose MySQL on port 3306

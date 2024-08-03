@@ -31,7 +31,6 @@ Implement a Daily Tasks feature for managing employee tasks, demonstrating profi
 - **ORM**: TypeORM
 - **Validation**: Both client and server-side
 
-
 ## Setup Instructions
 
 ### Prerequisites
@@ -46,39 +45,36 @@ Implement a Daily Tasks feature for managing employee tasks, demonstrating profi
     cd <repository-directory>
     ```
 
-2. Environment Configuration
-- Backend: Create a .env file in the backend directory and set the following variables:
-  ``` sh 
-  DB_HOST=mysql
-  DB_PORT=3306
-  MySQL_USERNAME=root
-  MySQL_PASSWORD=my-secret-pw
-  MySQL_DATABASE_NAME=mydatabase
-  JWT_SECRET=myjwtsecret
-  ```
+2. **Environment Configuration**
+   - Backend: Create a `.env` file in the backend directory and set the following variables:
+     ```sh
+     DB_HOST=mysql
+     DB_PORT=3306
+     MySQL_USERNAME=root
+     MySQL_PASSWORD=my-secret-pw
+     MySQL_DATABASE_NAME=mydatabase
+     JWT_SECRET=myjwtsecret
+     ```
 
-3. Running with Docker Compose
-
-    ``` sh 
-    docker  -compose up --build
+3. **Running with Docker Compose**
+    ```sh
+    docker-compose up --build
     ```
 
-
-4. Running Locally Without Docker
-    ``` sh
+4. **Running Locally Without Docker**
+    ```sh
     cd backend
     npm install
     npm run start
     ```
 
 ## Daily Tasks Report API Endpoints
-Base URL: http://localhost:3001
+Base URL: `http://localhost:3001`
 
-- Create Task: POST /tasks
-- Read Tasks: GET /tasks?day={day}
-- Update Task: PUT /tasks/:id
-- Delete Task: DELETE /tasks/:id
-
+- Create Task: `POST /tasks`
+- Read Tasks: `GET /tasks?day={day}`
+- Update Task: `PUT /tasks/:id`
+- Delete Task: `DELETE /tasks/:id`
 
 ## License
 MIT License
